@@ -1,0 +1,137 @@
+/* Style global */
+.App {
+  display: flex;
+  justify-content: center;  /* Centre horizontalement */
+  align-items: center;      /* Centre verticalement */
+  min-height: 100vh;        /* Utilise toute la hauteur de l'écran */
+  background-color: #111;   /* Fond noir */
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Conteneur principal pour la conversion */
+.converter {
+  background-color: #222;   /* Fond gris foncé */
+  padding: 20px;
+  border-radius: 15px;       /* Coins arrondis */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);  /* Ombre douce */
+  width: 350px;              /* Largeur fixe par défaut */
+  max-width: 90%;            /* Empêche de dépasser l'écran */
+  text-align: center;        /* Centre le texte */
+  transition: transform 0.3s ease-in-out;
+}
+
+.converter:hover {
+  transform: scale(1.05);    /* Effet de zoom */
+}
+
+/* Titre */
+.converter h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* Style de l'input */
+input {
+  padding: 12px 15px;
+  font-size: 16px;
+  width: 100%;               /* Prend toute la largeur disponible */
+  border: 2px solid #444;    /* Bordure grise */
+  border-radius: 10px;       /* Coins arrondis */
+  background-color: #333;    /* Fond sombre */
+  color: #fff;               /* Texte blanc */
+  margin-bottom: 15px;       /* Espace sous l'input */
+  outline: none;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+}
+
+/* Style du bouton */
+button {
+  padding: 12px 15px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Message d'erreur */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Résultat affiché */
+h2 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #4CAF50;
+}
+
+/* -------------------------------------- */
+/* MEDIA QUERIES POUR RESPONSIVE DESIGN */
+/* -------------------------------------- */
+
+/* Petits écrans (mobiles) */
+@media (max-width: 480px) {
+  .converter {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .converter h1 {
+    font-size: 18px;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Tablettes */
+@media (max-width: 768px) {
+  .converter {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .converter h1 {
+    font-size: 20px;
+  }
+
+  input, button {
+    font-size: 16px;
+  }
+}
+
+/* Écrans moyens (1024px et moins) */
+@media (max-width: 1024px) {
+  .converter {
+    width: 60%;
+  }
+}
+
+/* Grands écrans */
+@media (min-width: 1200px) {
+  .converter {
+    width: 400px; /* Rétablit une largeur optimale */
+  }
+}
